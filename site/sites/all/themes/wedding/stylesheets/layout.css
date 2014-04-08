@@ -1,0 +1,193 @@
+/* line 1, ../sass/layout.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, ../sass/layout.scss */
+.panel-pane {
+  clear: both;
+}
+
+/*Flexible Width*/
+/* line 9, ../sass/layout.scss */
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 100%;
+}
+
+/* line 12, ../sass/layout.scss */
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+  margin: 0;
+}
+
+/*Message*/
+/* line 16, ../sass/layout.scss */
+.front #message {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  z-index: 100;
+}
+
+/*Navbar*/
+/* line 25, ../sass/layout.scss */
+#navbar {
+  background: rgba(77, 77, 77, 0.8) !important;
+  width: 100%;
+}
+
+/* line 29, ../sass/layout.scss */
+#navbar .navbar-inner {
+  margin: 0 auto;
+  background: none;
+  border: none;
+  position: relative;
+  box-shadow: none;
+}
+
+/*Menu**********************/
+/* line 37, ../sass/layout.scss */
+#navbar ul.menu {
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+/* line 44, ../sass/layout.scss */
+#navbar ul.menu li {
+  float: left;
+  list-style-type: none;
+  list-style-image: none;
+  margin-right: 5px;
+}
+
+/* line 50, ../sass/layout.scss */
+#navbar ul.menu li a {
+  padding: 8px 12px;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 56, ../sass/layout.scss */
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+  border-radius: 10px;
+  background-color: #4d4d4d !important;
+}
+
+/* line 60, ../sass/layout.scss */
+.navbar .nav a:hover {
+  color: #86ddf8 !important;
+}
+
+/*Language Switcher*/
+/* line 64, ../sass/layout.scss */
+#block-locale-language {
+  float: left;
+  margin-top: 5px;
+}
+
+/* line 68, ../sass/layout.scss */
+#block-locale-language ul.language-switcher-locale-url {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/* line 74, ../sass/layout.scss */
+#block-locale-language ul.language-switcher-locale-url li.active {
+  display: none;
+}
+
+/* line 77, ../sass/layout.scss */
+#block-locale-language ul.language-switcher-locale-url li a {
+  font-size: .9em;
+  display: block;
+  text-decoration: none;
+  background: url(../images/lang-bg.png) no-repeat 0 0;
+  padding: 12px 0 0 16px;
+  color: #fff;
+  width: 45px;
+  height: 40px;
+}
+
+/*Site Name*/
+/* line 89, ../sass/layout.scss */
+#site-name {
+  float: left;
+  margin-top: 3px;
+}
+
+/* line 93, ../sass/layout.scss */
+#site-name a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Footer*/
+/* line 98, ../sass/layout.scss */
+#block-block-1 {
+  text-align: center;
+  font-size: .9em;
+}
+
+/*Responsive*/
+/* line 104, ../sass/layout.scss */
+iframe,
+img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 560px) {
+  /* line 108, ../sass/layout.scss */
+  .front .panel-flexible {
+    margin: 0 20px;
+  }
+
+  /* line 111, ../sass/layout.scss */
+  #navbar .menu {
+    background: #444;
+  }
+
+  /* line 114, ../sass/layout.scss */
+  #navbar .menu li {
+    width: 45%;
+  }
+
+  /* line 119, ../sass/layout.scss */
+  .nav-collapse .nav > li > a, .nav-collapse .nav > li > a:hover, .nav-collapse .nav > li > a:focus {
+    background: #4d4d4d;
+    color: #fff;
+  }
+}
+/*Navbar for Mobile*/
+/* line 125, ../sass/layout.scss */
+.btn-navbar {
+  background: #86ddf8 !important;
+  box-shadow: 2px 2px 2px 2px #444444 !important;
+}
+
+/* line 130, ../sass/layout.scss */
+.btn-navbar,
+.icon-bar {
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+/* line 134, ../sass/layout.scss */
+.icon-bar {
+  background: #fff!important;
+  box-shadow: none !important;
+}
+
+/*Footer*/
+/* line 139, ../sass/layout.scss */
+.footer {
+  margin-top: 1em !important;
+  padding: 10px 0 !important;
+}

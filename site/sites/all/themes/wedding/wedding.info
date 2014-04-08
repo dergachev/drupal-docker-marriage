@@ -1,0 +1,26 @@
+name = Wedding
+description = Theme for a wedding website
+core = 7.x
+base theme = bootstrap
+
+stylesheets[all][] = stylesheets/layout.css
+stylesheets[all][] = stylesheets/html.css
+stylesheets[all][] = stylesheets/views.css
+stylesheets[all][] = stylesheets/forms.css
+stylesheets[all][] = stylesheets/font-awesome.min.css
+stylesheets[screen and (min-width: 561px)][] = stylesheets/min-561.css
+stylesheets[screen and (min-width: 960px)][] = stylesheets/min-960.css
+stylesheets-conditional[lt IE 9][all][] = stylesheets/ie.css
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[footer] = Footer
+
+regions[content] = Content
+
+scripts[] = js/script.js

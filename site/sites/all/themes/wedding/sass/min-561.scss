@@ -1,0 +1,66 @@
+  /*Fixed navigation*/
+  #navbar {
+    position: fixed;
+    top: 10px;
+    z-index: 100;
+  }
+  /*Large front-page panes with overlay of content*/
+  .front .panel-pane {
+    height: 830px;
+    position: relative;
+  }
+  /*Panels*/
+  .front .panel-separator {
+    margin: 0;
+  }
+  .front .panel-pane .pane-inner2 {
+    background: rgba(255, 255, 255, .8);
+    width: 80%;
+    padding: 20px;
+    float: left;
+  }
+  .front .panel-pane .pane-inner {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    z-index: 0;
+  }
+  .front .panel-pane .homepage-top {
+    display: none;
+  }
+  /*Background Images*/
+  #homepage-intro {
+    background: url(../images/bavaria.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  #homepage-intro .pane-inner {
+    display: none;
+  }
+  #homepage-wedding {
+    background: url(../images/castle.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  #homepage-travel {
+    background: url(../images/travel.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  #homepage-story {
+    background: url(../images/montreal-skyline.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  #homepage-photos {
+    background: url(../images/sunset.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  #homepage-lodgings {
+    background: url(../images/mountains.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  #homepage-rsvp {
+    background: url(../images/odessa.jpg)  no-repeat center bottom;
+    background: url(../images/italy.jpg)  no-repeat center bottom;
+    background-size: cover;
+  }
+  .footer {
+    border-top: none !important;
+  }

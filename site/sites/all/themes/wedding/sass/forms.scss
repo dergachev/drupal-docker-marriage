@@ -1,0 +1,45 @@
+form {
+  margin-top: 0;
+}
+textarea,
+input {
+  border: 1px solid #bbb;
+  padding: 2px;
+  max-width: 100%;
+}
+
+label {
+  font-weight: normal;
+}
+.form-actions,
+.webform-component {
+  clear: left;
+  float: left;
+  margin-bottom: .5em;
+  max-width: 100%;
+}
+.form-actions input {
+  background: #207792;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1em;
+}
+form .description {
+  margin-top: .5em;
+  clear: left;
+  color: #999;
+}
+.form-type-radio {
+  float: left;
+  margin-right: 10px;
+  width: auto;
+}
+button#edit-submit {
+  clear: both;
+  float: left;
+  background: #fff !important;
+  color: #4d4d4d;
+  text-shadow: none;
+}

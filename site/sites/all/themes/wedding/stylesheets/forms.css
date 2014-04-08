@@ -1,0 +1,59 @@
+/* line 1, ../sass/forms.scss */
+form {
+  margin-top: 0;
+}
+
+/* line 5, ../sass/forms.scss */
+textarea,
+input {
+  border: 1px solid #bbbbbb;
+  padding: 2px;
+  max-width: 100%;
+}
+
+/* line 11, ../sass/forms.scss */
+label {
+  font-weight: normal;
+}
+
+/* line 15, ../sass/forms.scss */
+.form-actions,
+.webform-component {
+  clear: left;
+  float: left;
+  margin-bottom: .5em;
+  max-width: 100%;
+}
+
+/* line 21, ../sass/forms.scss */
+.form-actions input {
+  background: #207792;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* line 29, ../sass/forms.scss */
+form .description {
+  margin-top: .5em;
+  clear: left;
+  color: #999;
+}
+
+/* line 34, ../sass/forms.scss */
+.form-type-radio {
+  float: left;
+  margin-right: 10px;
+  width: auto;
+}
+
+/* line 39, ../sass/forms.scss */
+button#edit-submit {
+  clear: both;
+  float: left;
+  background: white !important;
+  color: #4d4d4d;
+  text-shadow: none;
+}

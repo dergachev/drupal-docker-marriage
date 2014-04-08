@@ -1,0 +1,95 @@
+/*Fixed navigation*/
+/* line 2, ../sass/min-561.scss */
+#navbar {
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+}
+
+/*Large front-page panes with overlay of content*/
+/* line 8, ../sass/min-561.scss */
+.front .panel-pane {
+  height: 830px;
+  position: relative;
+}
+
+/*Panels*/
+/* line 13, ../sass/min-561.scss */
+.front .panel-separator {
+  margin: 0;
+}
+
+/* line 16, ../sass/min-561.scss */
+.front .panel-pane .pane-inner2 {
+  background: rgba(255, 255, 255, 0.8);
+  width: 80%;
+  padding: 20px;
+  float: left;
+}
+
+/* line 22, ../sass/min-561.scss */
+.front .panel-pane .pane-inner {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  z-index: 0;
+}
+
+/* line 28, ../sass/min-561.scss */
+.front .panel-pane .homepage-top {
+  display: none;
+}
+
+/*Background Images*/
+/* line 32, ../sass/min-561.scss */
+#homepage-intro {
+  background: url(../images/bavaria.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 36, ../sass/min-561.scss */
+#homepage-intro .pane-inner {
+  display: none;
+}
+
+/* line 39, ../sass/min-561.scss */
+#homepage-wedding {
+  background: url(../images/castle.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 43, ../sass/min-561.scss */
+#homepage-travel {
+  background: url(../images/travel.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 47, ../sass/min-561.scss */
+#homepage-story {
+  background: url(../images/montreal-skyline.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 51, ../sass/min-561.scss */
+#homepage-photos {
+  background: url(../images/sunset.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 55, ../sass/min-561.scss */
+#homepage-lodgings {
+  background: url(../images/mountains.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 59, ../sass/min-561.scss */
+#homepage-rsvp {
+  background: url(../images/odessa.jpg) no-repeat center bottom;
+  background: url(../images/italy.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+
+/* line 64, ../sass/min-561.scss */
+.footer {
+  border-top: none !important;
+}

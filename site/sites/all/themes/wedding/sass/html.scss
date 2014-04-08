@@ -1,0 +1,75 @@
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  color: #6f6f6f;
+  font-size: .8em;
+}
+body.i18n-ru  {
+  // font-family: Roboto, Helvetica, sans-serif;
+}
+/*Links*/
+a {
+  text-decoration: none;
+  color: #207792;
+  text-outline: none;
+}
+a:hover {
+  color: #000;
+}
+#site-name .brand {
+  font-family: 'Josefin Slab';
+  text-shadow: none;
+  font-size: 22px;
+  margin-top: 5px;
+}
+#navbar .nav > li > a {
+  text-shadow: none;
+  font-family: 'Josefin Slab';
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 5px;
+}
+p {
+  line-height: 1.5em;
+}
+.front .panel-pane h2,
+#content h1#page-title {
+  font-family: 'Josefin Slab';
+  font-weight: bold;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  color: #207792;
+  margin: 1em 0 .5em 0;
+}
+h2, h3 {
+  font-family: 'Josefin Slab';
+  font-weight: 600;
+  font-size: 1.4em;
+}
+button#edit-submit,
+#block-locale-language,
+#block-block-1 {
+  font-family: 'Josefin Slab';
+}
+/*Override fonts in Russian*/
+.i18n-ru {
+  .panel-pane h2,
+  #content h1#page-title,
+  .homepage-top,
+  .pane-node h2,
+  button#edit-submit,
+  #block-locale-language,
+  #site-name .brand,
+  #navbar .nav > li > a,
+  h1, h2, h3,
+  .form-actions input,
+  #block-block-1 {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: 100;
+  }
+}
+/*Front Awesome*/
+.icon-home {
+  color: #fff;
+  border: none;
+}

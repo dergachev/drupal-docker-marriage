@@ -1,0 +1,91 @@
+/* line 1, ../sass/html.scss */
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  color: #6f6f6f;
+  font-size: .8em;
+}
+
+/*Links*/
+/* line 10, ../sass/html.scss */
+a {
+  text-decoration: none;
+  color: #207792;
+  text-outline: none;
+}
+
+/* line 15, ../sass/html.scss */
+a:hover {
+  color: #000;
+}
+
+/* line 18, ../sass/html.scss */
+#site-name .brand {
+  font-family: 'Josefin Slab';
+  text-shadow: none;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+/* line 24, ../sass/html.scss */
+#navbar .nav > li > a {
+  text-shadow: none;
+  font-family: 'Josefin Slab';
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* line 32, ../sass/html.scss */
+p {
+  line-height: 1.5em;
+}
+
+/* line 36, ../sass/html.scss */
+.front .panel-pane h2,
+#content h1#page-title {
+  font-family: 'Josefin Slab';
+  font-weight: bold;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  color: #207792;
+  margin: 1em 0 0.5em 0;
+}
+
+/* line 44, ../sass/html.scss */
+h2, h3 {
+  font-family: 'Josefin Slab';
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+/* line 51, ../sass/html.scss */
+button#edit-submit,
+#block-locale-language,
+#block-block-1 {
+  font-family: 'Josefin Slab';
+}
+
+/*Override fonts in Russian*/
+/* line 66, ../sass/html.scss */
+.i18n-ru .panel-pane h2,
+.i18n-ru #content h1#page-title,
+.i18n-ru .homepage-top,
+.i18n-ru .pane-node h2,
+.i18n-ru button#edit-submit,
+.i18n-ru #block-locale-language,
+.i18n-ru #site-name .brand,
+.i18n-ru #navbar .nav > li > a,
+.i18n-ru h1, .i18n-ru h2, .i18n-ru h3,
+.i18n-ru .form-actions input,
+.i18n-ru #block-block-1 {
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+/*Front Awesome*/
+/* line 72, ../sass/html.scss */
+.icon-home {
+  color: #fff;
+  border: none;
+}

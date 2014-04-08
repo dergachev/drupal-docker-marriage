@@ -1,0 +1,27 @@
+/* line 1, ../sass/min-960.scss */
+#navbar ul.menu {
+  float: right;
+  width: 620px;
+}
+
+/* line 5, ../sass/min-960.scss */
+#navbar .navbar-inner {
+  width: 960px;
+}
+
+/* line 8, ../sass/min-960.scss */
+.front .panel-pane .pane-inner {
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+}
+
+/* line 13, ../sass/min-960.scss */
+.front .panel-pane .pane-inner2 {
+  width: 400px;
+}
+
+/* line 16, ../sass/min-960.scss */
+.front .pane-views-photos-block .pane-inner2 {
+  width: 100%;
+}
