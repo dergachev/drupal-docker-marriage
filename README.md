@@ -36,7 +36,7 @@ docker run -t -i ubuntu /bin/bash
 docker images
 ```
 
-Now let's build our own docker image:
+Now let's build our own docker image from the included [Dockerfile](https://github.com/dergachev/drupal-docker-marriage/blob/master/Dockerfile):
 
 ```
 # Create ~/.ssh/id_rsa, ~/.ssh/id_rsa.pub (so we can later connect to the container with this).
@@ -44,7 +44,7 @@ ssh-keygen
 # Place the public key where Dockerfile knows about.
 cp ~/.ssh/id_rsa.pub ./deploy/id_rsa.pub
 
-# Creates a docker image from Dockerfile in the current directory,
+# Creates a docker image from Dockerfile in the current directory (.),
 # assigns it a tag of "drupal-docker-marriage".
 docker build -t drupal-docker-marriage .
 ```
@@ -54,7 +54,7 @@ created at the last successful step:
 
 ```bash
 # if the above failed at some step and we want to debug, the following will 
-LATEST_IMAGE_ID=$(docker images -q | head -n 1) docker run -t -i LATEST_IMAGE_ID /bin/bash
+LATEST_IMAGE_ID=$(docker images -q | head -n 1) docker run -t -i $LATEST_IMAGE_ID /bin/bash
 ```
 
 Once the build succeeds, you can run a container from the newly created image:
