@@ -1,0 +1,14 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - touch deploy/id_rsa.pub
+    - make build
+    - make run
+
+test:
+  override:
+    - curl localhost:8080
+
