@@ -10,5 +10,7 @@ dependencies:
 
 test:
   override:
-    - curl localhost:8080
+    - curl -v localhost:8080
+    - curl -s localhost:8080 | grep RSVP
+
 
