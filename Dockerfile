@@ -9,7 +9,10 @@ RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -s -f /bin/true /sbin/initctl
 
 # If host is running squid-deb-proxy, populate /etc/apt/apt.conf.d/30proxy
-RUN echo "Acquire::http::Proxy \"http://192.168.33.10:8000\";" > /etc/apt/apt.conf.d/30proxy
+RUN ip route | awk '/^def/{print $3}' > /tmp/host_ip.txt
+RUN perl -e 'use IO::Socket::INET; $s=IO::Socket::INET->new(PeerAddr=>shift); $s->write("HEAD /\n"); $s->read($x, 1024); $x =~ /squid-deb-proxy/ or die' $(cat /tmp/host_ip.txt):8000 \
+  && (echo "Acquire::http::Proxy \"http://$(cat /tmp/host_ip.txt):8000\";" > /etc/apt/apt.conf.d/30proxy) \
+  || echo "No squid-deb-proxy detected"
 
 # setup extended package repo
 RUN echo "deb http://archive.ubuntu.com/ubuntu saucy main restricted universe multiverse" > /etc/apt/sources.list
