@@ -55,7 +55,6 @@ RUN apt-get install -y postfix
 # Setup static directory for serving files, fix perms
 ADD ./site /var/shared/sites/wedding/site
 RUN rm -rf /var/www/; ln -s /var/shared/sites/wedding/site /var/www
-RUN chmod a+w /var/www/sites/default ; mkdir /var/www/sites/default/files ; chown -R www-data:www-data /var/www/
 
 # Apache vhost configuration
 RUN sed -i '/<VirtualHost/a \\t<Directory /var/www/>\n\t\tAllowOverride All\n\t</Directory>' /etc/apache2/sites-available/000-default.conf
@@ -90,6 +89,7 @@ RUN sed -ri 's/UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
 
 # This invalidates caching of subsequent steps, so we do this last.
 ADD . /var/shared/sites/wedding
+RUN chmod a+w /var/www/sites/default ; mkdir /var/www/sites/default/files ; chown -R www-data:www-data /var/www/
 
 EXPOSE 80
 EXPOSE 22
