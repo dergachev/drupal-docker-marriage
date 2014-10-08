@@ -9,8 +9,8 @@ RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -s -f /bin/true /sbin/initctl
 
 # If host is running squid-deb-proxy, populate /etc/apt/apt.conf.d/30proxy
-RUN route -n | awk '/^0.0.0.0/ {print $2}' > /tmp/host_ip.txt
-RUN echo "HEAD /" | nc `cat /tmp/host_ip.txt` 8000 | grep squid-deb-proxy \
+RUN ip route | awk '/^def/{print $3}' > /tmp/host_ip.txt
+RUN perl -e 'use IO::Socket::INET; $s=IO::Socket::INET->new(PeerAddr=>shift); $s->write("HEAD /\n"); $s->read($x, 1024); $x =~ /squid-deb-proxy/ or die' $(cat /tmp/host_ip.txt):8000 \
   && (echo "Acquire::http::Proxy \"http://$(cat /tmp/host_ip.txt):8000\";" > /etc/apt/apt.conf.d/30proxy) \
   || echo "No squid-deb-proxy detected"
 
@@ -55,7 +55,6 @@ RUN apt-get install -y postfix
 # Setup static directory for serving files, fix perms
 ADD ./site /var/shared/sites/wedding/site
 RUN rm -rf /var/www/; ln -s /var/shared/sites/wedding/site /var/www
-RUN chmod a+w /var/www/sites/default ; mkdir /var/www/sites/default/files ; chown -R www-data:www-data /var/www/
 
 # Apache vhost configuration
 RUN sed -i '/<VirtualHost/a \\t<Directory /var/www/>\n\t\tAllowOverride All\n\t</Directory>' /etc/apache2/sites-available/000-default.conf
@@ -90,6 +89,7 @@ RUN sed -ri 's/UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
 
 # This invalidates caching of subsequent steps, so we do this last.
 ADD . /var/shared/sites/wedding
+RUN chmod a+w /var/www/sites/default ; mkdir /var/www/sites/default/files ; chown -R www-data:www-data /var/www/
 
 EXPOSE 80
 EXPOSE 22

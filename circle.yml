@@ -1,0 +1,18 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - touch deploy/id_rsa.pub
+    - make build
+    - make run
+    # Let mysql spin up
+    - sleep 3
+
+test:
+  override:
+    - curl -v localhost:8080
+    - curl -s localhost:8080 | grep RSVP
+
+
