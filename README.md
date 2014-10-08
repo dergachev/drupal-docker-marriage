@@ -1,4 +1,5 @@
-drupal-docker-marriage
+
+drupal-docker-marriage [![Circle CI](https://circleci.com/gh/dergachev/drupal-docker-marriage.png?style=badge)](https://circleci.com/gh/dergachev/drupal-docker-marriage)
 ======================
 
 An example of how to deploy a simple, wedding-themed Drupal site via Docker.
