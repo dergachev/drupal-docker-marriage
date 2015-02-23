@@ -77,11 +77,11 @@ RUN /bin/bash /tmp/post-deploy.sh
 # Install public SSH key
 #==================================================================================
 
-ADD ./deploy/id_rsa.pub /root/.ssh/id_rsa.pub
-RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
-RUN chmod 700 /root/.ssh; chmod 600 /root/.ssh/authorized_keys
+# ADD ./deploy/id_rsa.pub /root/.ssh/id_rsa.pub
+# RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+# RUN chmod 700 /root/.ssh; chmod 600 /root/.ssh/authorized_keys
 # workaround for docker/saucy SSH bug; see https://gist.github.com/gasi/5691565
-RUN sed -ri 's/UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
+# RUN sed -ri 's/UsePAM yes/UsePAM no/' /etc/ssh/sshd_config
 
 #==================================================================================
 # Finally...
