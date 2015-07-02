@@ -1,3 +1,4 @@
+**NOTE**: See https://github.com/evolvingweb/drupal-docker-marriage for a more recent version of this project.
 
 drupal-docker-marriage [![Circle CI](https://circleci.com/gh/dergachev/drupal-docker-marriage.png?style=badge)](https://circleci.com/gh/dergachev/drupal-docker-marriage)
 ======================
